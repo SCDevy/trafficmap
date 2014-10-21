@@ -1,0 +1,112 @@
+@import (less) "css/normalize.css";
+
+@shadow:        2px 2px 10px #888888;
+
+body {
+  background: #EEEEEE;
+}
+
+#viewport {
+  width: 1200px; height: 760px;
+  margin: 50px auto 0 auto;
+  position: relative;
+  border: 1px solid #222222;
+}
+
+#map {
+  width:100%;
+  position:absolute; top:0; bottom:0;
+}
+
+#wrapper {
+  padding: 10px 0 0 10px;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+
+  header {
+    width: auto; height: 60px;
+    position: absolute;
+    top: 10px; left: 10px;
+    overflow: visible;
+    nav {
+      width: auto; height: 40px;
+      position: relative;
+      box-shadow: @shadow;
+      ul {
+        margin: 0; padding: 0;
+        list-style: none;
+        font-size: 0;
+        :hover {
+          background: #990000;
+        }
+        li {
+          height: 40px;
+          margin: 0; padding: 0 14px;
+          display: inline-block;
+          line-height: 40px;
+          font-size: 14px;
+          border-right: 1px solid #FFFFFF;
+          background: #222222; color: #FFFFFF;
+          cursor: pointer ;
+
+          a {
+            text-decoration: none;
+            color: #FFFFFF;
+          }
+        }
+        #search {
+          border: none;
+          background: #FFCC00;
+          &:hover {
+            background: #990000;
+          }
+        }
+      }
+    }
+  }
+
+  #content {
+    width: 390px; height: 640px;
+    padding: 20px;
+    top: 60px;
+    background: #FFFFFF;
+    position: absolute;
+    box-shadow: @shadow;
+    overflow: scroll;
+
+    p {
+      margin: 0 ; padding: 0;
+    }
+
+    .field {
+      width: 100%;
+      margin-bottom: 10px;
+      select {
+        width: 320px;
+      }
+    }
+
+    #myChart {
+    }
+  }
+}
+
+
+#renderer {
+  top: 10px; left: 450px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.00);
+}
+#rendererLive {
+  top: 10px; left: 450px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.00);
+}
+
+#about-blurb {
+  line-height: 26px;
+}
+
+#generate {
+  margin: 10px;
+}

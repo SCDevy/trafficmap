@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <title>TrafficMap</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css"/>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+</head>
+<body>
+    <div id="viewport">
+        <div id="map"></div>
+
+        <canvas id="renderer"></canvas>
+
+        <div id="wrapper" ng-app="trafficApp">
+            <header>
+                <nav>
+                    <ul>
+                        <!--<li><i class="fa fa-globe"></i> TrafficMap</li>-->
+                        <!--<a href="#ramps"><li><i class="fa fa-map-marker"></i> Ramps</li></a>-->
+                        <!--<a href="#traffic"><li><i class="fa fa-road"></i> Traffic</li></a>-->
+                        <a href="#data"><li><i class="fa fa-hdd-o"></i> View Data</li></a>
+                        <!--<li><i class="fa fa-cog"></i> Settings</li>-->
+                        <a href="#about"><li><i class="fa fa-users"></i> About</li></a>
+                        <a href="#search"><li id="search"><i class="fa fa-search"></i> Get Directions</li></a>
+                    </ul>
+                </nav>
+            </header>
+            <div id="content">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+
+<!-- Dependencies -->
+    <!-- Angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular-route.min.js"></script>
+    <!-- Mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <!-- Firebase -->
+    <script src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
+    <script src='https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js'></script>
+    <!-- Other -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+<!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/mapconfig.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/ramps.js"></script>
+</body>
+</html>

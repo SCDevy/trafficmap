@@ -1,0 +1,14 @@
+<!--<h2>{{ title }}</h2>-->
+<br/>
+    <div id="start" class="field"></div>
+    <div id="end" class="field"></div>
+    <button id="getdirections">Get Directions</button>
+<h2>Information</h2>
+<div class="field"><strong>Start Location:</strong> {{ startLocation }}</div>
+<div class="field"><strong>End Location:</strong> {{ endLocation }}</div>
+<div class="field"><h3>Travel Time</h3></div>
+<div class="field"><strong>With Current Traffic:</strong> {{ currentTimeTraffic }} minutes</div>
+<div class="field"><strong>Without Traffic:</strong> {{ currentTime }} minutes</div>
+<!--<div class="field"><strong>With Current Traffic:</strong> <span ng-bind="currentTimeTraffic"></span> minutes</div>-->
+<!--<div class="field"><strong>Without Traffic:</strong> <span ng-bind="currentTime"></span> minutes</div>-->
+<canvas id="myChart"></canvas>
